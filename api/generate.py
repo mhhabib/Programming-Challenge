@@ -1,4 +1,3 @@
-from operator import index
 import random
 import string
 import enum
@@ -50,10 +49,10 @@ def get_random_objects():
     # count the number of objects 
     randomObject = RandomObject()
     current_file_size = 0
-    index = 0
-
+    
     while current_file_size < total_file_size:
 
+        index = random.randint(4,17)
         if index % 4 == ObjectTypes.IntegerNumber.value:
             generateObject=random.randint(99,9999999).__str__()
             randomObject.objectsCount(ObjectTypes.IntegerNumber)
@@ -70,9 +69,7 @@ def get_random_objects():
             generateObject=''.join(random.choice(string.ascii_letters) for i in range(7))
             randomObject.objectsCount(ObjectTypes.Alphabetic)
 
-
-        index=len(generateObject)+1
-        current_file_size +=index
+        current_file_size +=len(generateObject)+1
         if current_file_size > total_file_size:
             break
         
