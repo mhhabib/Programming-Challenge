@@ -1,0 +1,128 @@
+body {
+    background-color: #E9EBF7 !important;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+*::selection {
+    background: #ff7b54;
+    color: white;
+}
+
+.navbar-custom {
+    background: #283c86;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #45a247, #283c86);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #45a247, #283c86);
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255, 255, 255, .8);
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: gold;
+    font-weight: 700;
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+.navbar-brand {
+    margin-left: 80px;
+}
+.navbar-nav {
+    margin-right: 80px;
+}
+
+.navbar-toggler{
+    background-color: #45a247;
+    color: #E9EBF7;
+    border:none;
+}
+.navbar-toggler .line{
+    width: 100%;
+    float: left;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+#main-content{
+    margin-top: 8.5rem;
+}
+.generate-button-block{
+    margin-bottom: 2.5rem;
+}
+.downloadable-link-block p{
+    color: darkslategrey;
+    font-size: 22px;
+}
+.downloadable-link-block p a{
+    text-decoration: none;
+}
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        margin-left: 5px;
+    }
+    .navbar-nav {
+        margin-right: 5px;
+    }
+    #main-content{
+        margin-top: 3.5rem;
+    }
+    .downloadable-link-block p{
+        font-size: 18px;
+    }
+}
+.report-view-block {
+    margin-top: 3rem;
+    width: 80%;
+}
+.report-view-block{
+    background-color: #f7f8fc;
+    padding: 20px 15px;
+    border-radius: 10px;
+    border: 1px solid #babcc6;
+}
+.report-view-block p{
+    font-size: 22px;
+    font-family: serif;
+    font-weight: 300;
+    color: darkslategray;
+    line-height: 16px;
+}
+
+#reportView, #downloadLink, #viewReportButton, #wait-message{
+    display: none;
+}
+
+#wait-message p{
+    overflow: hidden; 
+    border-right: .15em solid orange; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em; 
+    animation: 
+      typing 2.0s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
