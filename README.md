@@ -23,7 +23,7 @@ G[View report] --> I[Display count report]
 
 # Installations
 
-- Clone this repository in your preferable directory
+- Clone this repository in your preferable directory and go to the project directory
 - Active virtual environment
 ```
 python -m venv env
