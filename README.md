@@ -1,23 +1,25 @@
 # Random objects generator
 A web application for generating random objects with Python Django framework
 
-# Application flowchart
+# Application diagram
 ```mermaid
 flowchart TD
 B[Alphabetical String] --> A[Random Objects]
 C[Integer Numbers] --> A[Random Objects]
-DB[Real Numbers] --> A[Random Objects]
+D[Real Numbers] --> A[Random Objects]
 E[Alphanumerics String] --> A[Random Objects]
-A[Random Objects] --> F[Generate text file within 2MB]
-F[Generate text file within 2MB] --> H[Download Text file]
-A[Random Objects] --> G[View report]
+A[Random Objects] --> Y{Is generate?}
+Y -- No --> N[Generating..]
+N --> Y
+Y -- Yes --> F[Generate Link]
+F[Generate Link] --> H[Download Text file]
+Y -- Yes --> G[View report]
 G[View report] --> I[Display count report]
 ```
 
 # Prerequisite
 
-- [x] Need to have Python's latest version - 3.9.7
-- [x] Need to have Django - 4.0.4
+- [x] Need to have installed Python's latest version - 3.9.7
 
 # Installations
 
